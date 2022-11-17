@@ -34,13 +34,13 @@ bool checkforall(string textFile, int& num_rows, int& num_columns) {
 		}
 	}
 	input.close();
-
+        cols = cols/rows;
 	if (rows != num_rows)
-		return true;
+		return false;
 	if (cols != num_columns)
-		return true;
+		return false;
 
-	return false;
+	return true;
 }
 
 void creatingvect(string textFile, int num_rows, int num_columns, vector<vector<int>>& matrix) {
